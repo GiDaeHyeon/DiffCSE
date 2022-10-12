@@ -1,0 +1,8 @@
+SimCSE:
+  encoder:
+    weight: "beomi/kobert"
+    freeze: False
+    temperature: 0.05
+  hparam:
+    freeze: False
+    leaning_rate: 0.0001
