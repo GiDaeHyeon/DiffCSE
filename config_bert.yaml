@@ -1,0 +1,23 @@
+SimCSE:
+  encoder:
+    weight: "klue/bert-base"
+    temperature: 0.05
+  hparam:
+    optimizer: "AdamW"
+    learning_rate: 0.0001
+    temperature: 0.05
+    batch_size: 256
+  datamodule:
+    is_sup: True
+    batch_size: 256
+    num_workers: 8
+    drop_last: True
+    max_length: 64
+    tokenizer: "klue/bert-base"
+  trainer:
+    devices: [2, 3]
+    max_epochs: 1000
+    accelerator: gpu
+    log_dir: ./logs/SimCSE-bert
+    ckpt_dir: ./checkpoints/SimCSE-bert
+    name: Supervised-1

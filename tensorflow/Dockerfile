@@ -1,1 +1,0 @@
-FROM tensorflow/tensorflow:2.10-gpu
